@@ -25,7 +25,9 @@ Micro-DDD RestAPI for Shell Executor
 [![Go-Uuid](https://img.shields.io/badge/GoLib-Uuid-green.svg)](https://github.com/google/uuid/)
 
 ## Getting Started
-Mikroservis 
+<b>Resthell</b> provides the ability to run a shell command with RestAPI. You can run it locally or as a container. 
+
+It has been developed with <b>Domain Driven Design<b> architecture and allows you to be included in the domain and perform external operations in all microservice infrastructures without additional development processes. 
 
 ## Usage
 ```bash
@@ -131,6 +133,9 @@ Create "relase" branch and create a pull request to "release" branch and merge i
     └── json
         └── json.go
 ```
+
+## Contributing
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
 ## Contact
 
