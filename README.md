@@ -22,7 +22,7 @@ Micro-DDD RestAPI for Shell Executor
 ### Dependencies
 Gin
 Ioc
-<a href="https://gopkg.in/yaml.v3"><img src="https://gh.kaos.st/godoc.svg" alt="Yaml" />Yaml</a>
+[![Go-Yaml](https://img.shields.io/badge/GoLib-Yaml-green.svg)](https://gopkg.in/yaml.v3/)
 UUID
 
 ## Getting Started
