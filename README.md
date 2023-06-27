@@ -54,11 +54,13 @@ kubectl apply -f script/k8s.yml
 ```
 
 ## Github Actions
+Fork the project and create below secrets in your repo.
+
 DOCKERHUB_USERNAME
+
 DOCKERHUB_TOKEN
 
-pull_request to release branch
-
+Create "relase" branch and create a pull request to "release" branch and merge it. Github Actions will build and push docker image to your dockerhub repo.
 
 ## Project Structure - Domain Driven Design
 ```bash
