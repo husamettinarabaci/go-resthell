@@ -1,5 +1,6 @@
 # go-resthell
-Micro-DDD (Hex-Arc) RestAPI for Shell Executor [![Build](https://github.com/husamettinarabaci/go-resthell/actions/workflows/main.yml/badge.svg)](https://github.com/husamettinarabaci/go-resthell/actions/workflows/main.yml)
+Micro-DDD (Hex-Arc) RestAPI for Shell Executor 
+[![Build](https://github.com/husamettinarabaci/go-resthell/actions/workflows/main.yml/badge.svg)](https://github.com/husamettinarabaci/go-resthell/actions/workflows/main.yml)
 
 <a href="https://kaos.sh/g/go-badge"><img src="https://gh.kaos.st/godoc.svg" alt="PkgGoDev" /></a>
 <a href="https://kaos.sh/w/go-badge/ci"><img src="https://kaos.sh/w/go-badge/ci.svg" alt="GitHub Actions CI Status" /></a>
