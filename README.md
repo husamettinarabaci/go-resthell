@@ -29,6 +29,11 @@ Micro-DDD RestAPI for Shell Executor
 
 It has been developed with <b>Domain Driven Design</b> architecture and allows you to be included in the domain and perform external operations in all microservice infrastructures without additional development processes. 
 
+Do you want to learn more information about Domain Driven Design? [Click here](https://en.wikipedia.org/wiki/Domain-driven_design)
+Also, you can see these pictures about Domain Driven Design. 
+[Hex-Arc-1](https://github.com/husamettinarabaci/go-resthell/tree/main/doc/Hex-Arc-1.jpg)
+[Hex-Arc-2](https://github.com/husamettinarabaci/go-resthell/tree/main/doc/Hex-Arc-2.jpg)
+
 ## Usage
 ```bash
 POST https://localhost:18080/api/cmd HTTP/1.1
