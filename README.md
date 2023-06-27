@@ -27,10 +27,7 @@ Micro-DDD RestAPI for Shell Executor
 ## Getting Started
 Mikroservis 
 
-## Usage - Local
-```bash
-export LOCAL=true && go run cmd/main.go
-```
+## Usage
 ```bash
 POST https://localhost:18080/api/cmd HTTP/1.1
 content-type: application/json
@@ -38,6 +35,11 @@ content-type: application/json
 {
     "command": "ls -al"
 }
+```
+
+## Local Run
+```bash
+export LOCAL=true && go run cmd/main.go
 ```
 
 ## Docker Build & Run
@@ -54,7 +56,7 @@ kubectl apply -f script/k8s.yml
 ```
 
 ## Github Actions
-Fork the project and create below secrets in your repo.
+Fork the project and create the below secrets in your repo.
 
 DOCKERHUB_USERNAME
 
