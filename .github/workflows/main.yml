@@ -1,9 +1,10 @@
 name: Build
 
 on:
-  push:
-    tags:
-      - '*'
+  pull_request:
+    branches:
+      - "release"
+
 jobs:
   build:
     runs-on: ubuntu-latest

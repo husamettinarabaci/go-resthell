@@ -45,3 +45,9 @@ Kubernetes
 kubectl apply -f script/k8s.yml
 ```
 
+CI/CD
+```
+DOCKERHUB_USERNAME
+DOCKERHUB_TOKEN
+```
+
