@@ -9,8 +9,9 @@ RUN adduser \
   --uid 65532 \
   resthell
 
-WORKDIR /go
+WORKDIR /app
 COPY . .
+RUN echo $(ls)
 RUN CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -ldflags="-s -w" -o /main ./cmd/main.go
 
 FROM scratch
@@ -21,7 +22,7 @@ COPY --from=base /etc/passwd /etc/passwd
 COPY --from=base /etc/group /etc/group
 
 COPY --from=base /main .
-COPY --from=base /config/ ./config/
+COPY --from=base /app/config/ ./config/
 
 USER resthell:resthell
 EXPOSE 18080
