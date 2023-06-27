@@ -47,6 +47,6 @@ func (c *RestConfig) ReadConfig() {
 	}
 }
 
-func IsDebug() bool {
+func (c *RestConfig) IsDebug() bool {
 	return GetRestConfigInstance().Debug
 }

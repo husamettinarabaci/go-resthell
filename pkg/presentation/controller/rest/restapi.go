@@ -45,11 +45,7 @@ func (api *RestAPI) PostCommand(c *gin.Context) {
 		c.JSON(http.StatusBadRequest, gin.H{"error": mo.ErrInvalidInput.Error()})
 		return
 	}
-	isCommandExists, err := api.queryHandler.IsCommandExists(c, commandRequestDto.ToCommandRequestEntity())
-	if err != nil {
-		c.JSON(http.StatusBadRequest, gin.H{"error": err.Error()})
-		return
-	}
+	isCommandExists, _ := api.queryHandler.IsCommandExists(c, commandRequestDto.ToCommandRequestEntity())
 	if !isCommandExists {
 		c.JSON(http.StatusBadRequest, gin.H{"error": mo.ErrCommandIsNotShellCommand.Error()})
 		return

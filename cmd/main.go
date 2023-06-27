@@ -34,9 +34,17 @@ func main() {
 		panic(err)
 	}
 
+	//Infrastructure Resthell Log Adapter
+	err = cont.Singleton(func() ia.LogAdapter {
+		return ia.NewLogAdapter()
+	})
+	if err != nil {
+		panic(err)
+	}
+
 	//Application resthell Service
-	err = cont.Singleton(func(s ds.Service, i ia.ShellAdapter) as.Service {
-		return as.NewService(s, i)
+	err = cont.Singleton(func(s ds.Service, i ia.ShellAdapter, l ia.LogAdapter) as.Service {
+		return as.NewService(s, i, l)
 	})
 	if err != nil {
 		panic(err)
