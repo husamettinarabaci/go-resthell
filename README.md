@@ -19,7 +19,71 @@ yaml
 UUID
 
 Project Structure
-TODO
+```bash
+.
+├── cmd
+│   └── main.go
+├── config
+│   ├── log_local.yml
+│   ├── log.yml
+│   ├── rest_local.yml
+│   └── rest.yml
+├── core
+│   ├── application
+│   │   ├── infrastructure
+│   │   │   └── port
+│   │   │       ├── log.go
+│   │   │       └── shell.go
+│   │   ├── presentation
+│   │   │   ├── adapter
+│   │   │   │   ├── command.go
+│   │   │   │   └── query.go
+│   │   │   └── port
+│   │   │       ├── command.go
+│   │   │       └── query.go
+│   │   └── service
+│   │       └── service.go
+│   └── domain
+│       ├── model
+│       │   ├── entity
+│       │   │   ├── commandrequest.go
+│       │   │   └── commandresponse.go
+│       │   ├── interface
+│       │   │   └── loggable.go
+│       │   └── object
+│       │       ├── command.go
+│       │       ├── error.go
+│       │       └── response.go
+│       └── service
+│           └── service.go
+├── go.mod
+├── go.sum
+├── LICENSE
+├── pkg
+│   ├── infrastructure
+│   │   ├── adapter
+│   │   │   ├── log.go
+│   │   │   └── shell.go
+│   │   └── mapper
+│   │       └── command.go
+│   └── presentation
+│       ├── controller
+│       │   └── rest
+│       │       └── restapi.go
+│       └── dto
+│           ├── commandrequest.go
+│           └── commandresponse.go
+├── README.md
+├── script
+│   ├── Dockerfile
+│   └── k8s.yml
+├── TODO.md
+└── tool
+    ├── config
+    │   ├── log.go
+    │   └── rest.go
+    └── json
+        └── json.go
 ```
 
 Usage
