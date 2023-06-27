@@ -1,0 +1,3 @@
+debug: true
+restapi:
+  port: "18080"

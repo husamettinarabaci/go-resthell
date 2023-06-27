@@ -1,0 +1,61 @@
+name: Build
+
+on:
+  push:
+    tags:
+      - '*'
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: Set up Go
+      uses: actions/setup-go@v4
+      with:
+        go-version: '1.20.0'
+    - name: Build
+      run: |
+        mkdir build
+        cd ..
+        mkdir -p github.com/loop-soft
+        cd github.com/loop-soft
+        git clone https://.:${{ secrets.API_TOKEN_GITHUB }}@github.com/loop-soft/portal-be.git
+        cd portal-be
+        go get ./...
+        cd ..
+        mkdir -p portal-be-authentication
+        cp -r ../../portal-be-authentication/* ./portal-be-authentication
+        cd ../../
+        go work init
+        echo "use github.com/loop-soft/portal-be" >> go.work
+        echo "use github.com/loop-soft/portal-be-authentication" >> go.work
+        CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -v -ldflags="-s -w" -o ./portal-be-authentication/build/main ./github.com/loop-soft/portal-be-authentication/cmd/main.go
+        mkdir -p ./portal-be-authentication/build/config
+        cp -r ./github.com/loop-soft/portal-be/config/* ./portal-be-authentication/build/config/
+        cd ./portal-be-authentication/build/
+        echo "Output:"
+        ls -la
+        echo "End Output"
+        cd ..
+
+    - name: Configure AWS Credentials
+      uses: aws-actions/configure-aws-credentials@v1
+      with:
+        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        aws-region: eu-central-1
+
+    - name: Login to Amazon ECR
+      id: login-ecr
+      uses: aws-actions/amazon-ecr-login@v1
+
+    - name: Build, tag, and push image to Amazon ECR
+      id: build-image
+      env:
+        ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
+        ECR_REPOSITORY: portal_authentication
+        IMAGE_TAG: ${{ github.ref_name }}
+      run: |
+        docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG -f script/Dockerfile_cicd .
+        docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
+        echo "::set-output name=image::$ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG"
