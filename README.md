@@ -25,39 +25,42 @@ Micro-DDD RestAPI for Shell Executor
 [![Go-Uuid](https://img.shields.io/badge/GoLib-Uuid-green.svg)](https://github.com/google/uuid/)
 
 ## Getting Started
+Mikroservis 
 
-## Usage
-```
+## Usage - Local
+```bash
 export LOCAL=true && go run cmd/main.go
+```
+```bash
+POST https://localhost:18080/api/cmd HTTP/1.1
+content-type: application/json
 
-POST localhost:18080/api/cmd HTTP/1.1
 {
-    "command": ""
+    "command": "ls -al"
 }
 ```
 
-## Docker
-```
-docker build -t devhsmtek/resthell -f script/Dockerfile .
-docker tag devhsmtek/resthell devhsmtek/resthell:latest
-docker push devhsmtek/resthell:latest
-docker run -p 18080:18080 devhsmtek/resthell:latest
+## Docker Build & Run
+```bash
+docker build -t {DOCKER_USERNAME}/{YOUR_REPO} -f script/Dockerfile .
+docker tag {DOCKER_USERNAME}/{YOUR_REPO} {DOCKER_USERNAME}/{YOUR_REPO}:latest
+docker push {DOCKER_USERNAME}/{YOUR_REPO}:latest
+docker run -p 18080:18080 {DOCKER_USERNAME}/{YOUR_REPO}:latest
 ```
 
-## Kubernetes
-```
+## Kubernetes Deploy
+```bash
 kubectl apply -f script/k8s.yml
 ```
 
-## CI/CD
-```
+## Github Actions
 DOCKERHUB_USERNAME
 DOCKERHUB_TOKEN
 
 pull_request to release branch
-```
 
-## Project Structure
+
+## Project Structure - Domain Driven Design
 ```bash
 .
 ├── cmd
@@ -131,4 +134,3 @@ Hüsamettin ARABACI - info@husamettinarabaci.com
 
 Project Link: [https://github.com/husamettinarabaci/go-resthell](https://github.com/husamettinarabaci/go-resthell)
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
