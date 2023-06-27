@@ -1,6 +1,9 @@
 # go-resthell
 Micro-DDD RestAPI for Shell Executor
-
+<p align="center"
+<a href="https://kaos.sh/g/go-badge"><img src="https://gh.kaos.st/godoc.svg" alt="PkgGoDev" /></a>
+<a href="https://kaos.sh/w/go-badge/ci"><img src="https://kaos.sh/w/go-badge/ci.svg" alt="GitHub Actions CI Status" /></a>
+</p>
 <br>
 <div align="center">
 <a href="https://github.com/husamettinarabaci/go-resthell/stargazers"><img src="https://img.shields.io/github/stars/husamettinarabaci/go-resthell" alt="Stars Badge"/></a>
@@ -11,12 +14,14 @@ Micro-DDD RestAPI for Shell Executor
 <a href="https://github.com/husamettinarabaci/go-resthell/blob/master/LICENSE"><img src="https://img.shields.io/github/license/husamettinarabaci/go-resthell?color=2b9348" alt="License Badge"/></a>
 </div>
 <br>
-DDD
-Test
-Document
-CI/CD
-Release
-Docker
+
+### Stack
+![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)
+![GitHub Actions](https://img.shields.io/badge/github%20actions-%232671E5.svg?style=for-the-badge&logo=githubactions&logoColor=white)
+![Go](https://img.shields.io/badge/go-%2300ADD8.svg?style=for-the-badge&logo=go&logoColor=white)
+![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)
+![Kubernetes](https://img.shields.io/badge/kubernetes-%23326ce5.svg?style=for-the-badge&logo=kubernetes&logoColor=white)
+
 
 ### Dependencies
 Gin
