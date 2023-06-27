@@ -49,5 +49,7 @@ CI/CD
 ```
 DOCKERHUB_USERNAME
 DOCKERHUB_TOKEN
+
+pull_request to release branch
 ```
 
