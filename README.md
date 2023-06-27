@@ -1,6 +1,6 @@
 # go-resthell
 Micro-DDD RestAPI for Shell Executor
-<p align="center"
+<p align="center">
 <a href="https://kaos.sh/g/go-badge"><img src="https://gh.kaos.st/godoc.svg" alt="PkgGoDev" /></a>
 <a href="https://kaos.sh/w/go-badge/ci"><img src="https://kaos.sh/w/go-badge/ci.svg" alt="GitHub Actions CI Status" /></a>
 <a href="https://github.com/husamettinarabaci/go-resthell/stargazers"><img src="https://img.shields.io/github/stars/husamettinarabaci/go-resthell" alt="Stars Badge"/></a>
@@ -22,10 +22,43 @@ Micro-DDD RestAPI for Shell Executor
 ### Dependencies
 Gin
 Ioc
-yaml
+<a href="https://gopkg.in/yaml.v3"><img src="https://gh.kaos.st/godoc.svg" alt="Yaml" />Yaml</a>
 UUID
 
-### Project Structure
+## Getting Started
+
+## Usage
+```
+export LOCAL=true && go run cmd/main.go
+
+POST localhost:18080/api/cmd HTTP/1.1
+{
+    "command": ""
+}
+```
+
+## Docker
+```
+docker build -t devhsmtek/resthell -f script/Dockerfile .
+docker tag devhsmtek/resthell devhsmtek/resthell:latest
+docker push devhsmtek/resthell:latest
+docker run -p 18080:18080 devhsmtek/resthell:latest
+```
+
+## Kubernetes
+```
+kubectl apply -f script/k8s.yml
+```
+
+## CI/CD
+```
+DOCKERHUB_USERNAME
+DOCKERHUB_TOKEN
+
+pull_request to release branch
+```
+
+## Project Structure
 ```bash
 .
 ├── cmd
@@ -91,37 +124,6 @@ UUID
     │   └── rest.go
     └── json
         └── json.go
-```
-
-Usage
-```
-export LOCAL=true && go run cmd/main.go
-
-POST localhost:18080/api/cmd HTTP/1.1
-{
-    "command": ""
-}
-```
-
-Docker
-```
-docker build -t devhsmtek/resthell -f script/Dockerfile .
-docker tag devhsmtek/resthell devhsmtek/resthell:latest
-docker push devhsmtek/resthell:latest
-docker run -p 18080:18080 devhsmtek/resthell:latest
-```
-
-Kubernetes
-```
-kubectl apply -f script/k8s.yml
-```
-
-CI/CD
-```
-DOCKERHUB_USERNAME
-DOCKERHUB_TOKEN
-
-pull_request to release branch
 ```
 
 ## Contact
