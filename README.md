@@ -1,5 +1,5 @@
 # go-resthell
-Micro-DDD (Hex-Arc) RestAPI for Shell Executor
+Micro-DDD (Hex-Arc) RestAPI for Shell Executor [![Build](https://github.com/husamettinarabaci/go-resthell/actions/workflows/main.yml/badge.svg)](https://github.com/husamettinarabaci/go-resthell/actions/workflows/main.yml)
 
 <a href="https://kaos.sh/g/go-badge"><img src="https://gh.kaos.st/godoc.svg" alt="PkgGoDev" /></a>
 <a href="https://kaos.sh/w/go-badge/ci"><img src="https://kaos.sh/w/go-badge/ci.svg" alt="GitHub Actions CI Status" /></a>
@@ -23,6 +23,7 @@ Micro-DDD (Hex-Arc) RestAPI for Shell Executor
 [![Go-Json](https://img.shields.io/badge/GoLib-Json-green.svg)](https://github.com/goccy/go-json/)
 [![Go-Yaml](https://img.shields.io/badge/GoLib-Yaml-green.svg)](https://gopkg.in/yaml.v3/)
 [![Go-Uuid](https://img.shields.io/badge/GoLib-Uuid-green.svg)](https://github.com/google/uuid/)
+[![Testify](https://img.shields.io/badge/GoLib-Testify-green.svg)](https://github.com/stretchr/testify/)
 
 ## Getting Started
 <b>Resthell</b> provides the ability to run a shell command with RestAPI. You can run it locally or as a container. 
