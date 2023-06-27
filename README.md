@@ -27,7 +27,7 @@ Micro-DDD RestAPI for Shell Executor
 ## Getting Started
 <b>Resthell</b> provides the ability to run a shell command with RestAPI. You can run it locally or as a container. 
 
-It has been developed with <b>Domain Driven Design<b> architecture and allows you to be included in the domain and perform external operations in all microservice infrastructures without additional development processes. 
+It has been developed with <b>Domain Driven Design</b> architecture and allows you to be included in the domain and perform external operations in all microservice infrastructures without additional development processes. 
 
 ## Usage
 ```bash
