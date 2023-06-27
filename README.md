@@ -20,10 +20,11 @@ Micro-DDD RestAPI for Shell Executor
 
 
 ### Dependencies
-Gin
-Ioc
+[![Go-Gin](https://img.shields.io/badge/GoLib-Gin-green.svg)](https://github.com/gin-gonic/gin/)
+[![Go-Ioc](https://img.shields.io/badge/GoLib-Ioc-green.svg)](https://github.com/golobby/container/v3/)
+[![Go-Json](https://img.shields.io/badge/GoLib-Json-green.svg)](https://github.com/goccy/go-json/)
 [![Go-Yaml](https://img.shields.io/badge/GoLib-Yaml-green.svg)](https://gopkg.in/yaml.v3/)
-UUID
+[![Go-Uuid](https://img.shields.io/badge/GoLib-Uuid-green.svg)](https://github.com/google/uuid/)
 
 ## Getting Started
 
