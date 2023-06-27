@@ -1,0 +1,40 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: resthell
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: resthell
+  template:
+    metadata:
+      labels:
+        app: resthell
+    spec:
+      containers:
+        - name: resthell
+          image: devhsmtek/resthell:latest
+          imagePullPolicy: "Always"
+          ports:
+            - containerPort: 18080
+          resources:
+            limits:
+              memory: 128Mi
+              cpu: "0.2"
+            requests:
+              memory: 16Mi
+              cpu: "0.01"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: resthell
+spec:
+  clusterIP: None
+  ports:
+  - port: 18080
+    targetPort: 18080
+    name: resthell
+  selector:
+    app: resthell

@@ -7,7 +7,7 @@ RUN adduser \
   --shell "/sbin/nologin" \
   --no-create-home \
   --uid 65532 \
-  portal
+  resthell
 
 FROM scratch
 
@@ -18,8 +18,7 @@ COPY --from=base /etc/group /etc/group
 
 COPY ./build/ .
 
-USER portal:portal
-EXPOSE 18000
+USER resthell:resthell
 EXPOSE 18080
 
 CMD ["./main"]

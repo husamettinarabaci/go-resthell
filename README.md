@@ -32,3 +32,16 @@ POST localhost:18080/api/cmd HTTP/1.1
 }
 ```
 
+Docker
+```
+docker build -t devhsmtek/resthell -f script/Dockerfile .
+docker tag devhsmtek/resthell devhsmtek/resthell:latest
+docker push devhsmtek/resthell:latest
+docker run -p 18080:18080 devhsmtek/resthell:latest
+```
+
+Kubernetes
+```
+kubectl apply -f script/k8s.yml
+```
+
