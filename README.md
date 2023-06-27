@@ -9,7 +9,6 @@ Micro-DDD RestAPI for Shell Executor
 <a href="https://github.com/husamettinarabaci/go-resthell/issues"><img src="https://img.shields.io/github/issues/husamettinarabaci/go-resthell" alt="Issues Badge"/></a>
 <a href="https://github.com/husamettinarabaci/go-resthell/graphs/contributors"><img alt="GitHub contributors" src="https://img.shields.io/github/contributors/husamettinarabaci/go-resthell?color=2b9348"></a>
 <a href="https://github.com/husamettinarabaci/go-resthell/blob/master/LICENSE"><img src="https://img.shields.io/github/license/husamettinarabaci/go-resthell?color=2b9348" alt="License Badge"/></a>
-</p>
 
 ### Stack
 ![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)
@@ -25,6 +24,7 @@ Micro-DDD RestAPI for Shell Executor
 [![Go-Json](https://img.shields.io/badge/GoLib-Json-green.svg)](https://github.com/goccy/go-json/)
 [![Go-Yaml](https://img.shields.io/badge/GoLib-Yaml-green.svg)](https://gopkg.in/yaml.v3/)
 [![Go-Uuid](https://img.shields.io/badge/GoLib-Uuid-green.svg)](https://github.com/google/uuid/)
+</p>
 
 ## Getting Started
 
