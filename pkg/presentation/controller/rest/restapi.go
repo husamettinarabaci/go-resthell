@@ -38,7 +38,11 @@ func (api *RestAPI) PostCommand(c *gin.Context) {
 		c.JSON(http.StatusBadRequest, gin.H{"error": err.Error()})
 		return
 	}
-	cmd := json["command"].(string)
+	cmd, ok := json["command"].(string)
+	if !ok {
+		c.JSON(http.StatusBadRequest, gin.H{"error": mo.ErrInvalidInput.Error()})
+		return
+	}
 	var commandRequestDto dto.CommandRequest
 	commandRequestDto.Command = cmd
 	if commandRequestDto.IsEmpty() {
