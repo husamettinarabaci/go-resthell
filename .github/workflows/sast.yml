@@ -2,7 +2,7 @@ name: Run Gosec
 on:
   push:
     branches:
-      - master
+      - main
 jobs:
   tests:
     runs-on: ubuntu-latest
