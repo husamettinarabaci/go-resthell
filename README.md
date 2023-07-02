@@ -3,6 +3,7 @@ Micro-DDD (Hex-Arc) RestAPI for Shell Executor
 
 [![Build](https://github.com/husamettinarabaci/go-resthell/actions/workflows/build.yml/badge.svg)](https://github.com/husamettinarabaci/go-resthell/actions/workflows/build.yml)
 [![Test](https://github.com/husamettinarabaci/go-resthell/actions/workflows/test.yml/badge.svg)](https://github.com/husamettinarabaci/go-resthell/actions/workflows/test.yml)
+[![Test](https://github.com/husamettinarabaci/go-resthell/actions/workflows/sast.yml/badge.svg)](https://github.com/husamettinarabaci/go-resthell/actions/workflows/sast.yml)
 
 <a href="https://kaos.sh/g/go-badge"><img src="https://gh.kaos.st/godoc.svg" alt="PkgGoDev" /></a>
 <a href="https://kaos.sh/w/go-badge/ci"><img src="https://kaos.sh/w/go-badge/ci.svg" alt="GitHub Actions CI Status" /></a>
